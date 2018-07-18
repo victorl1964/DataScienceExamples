@@ -1,0 +1,102 @@
+2018-06-21 08:01:07,168 INFO: ML RESTAPI startup [in /home/victorl/Documents/DIPLOMADO-UPEL-EducacionUniversitaria/TEMAS-o-AREAS/COMPUTER-SCIENCE/EJEMPLOS/PYTHON/FLASK/sentimentpredictor/webapp/__init__.py:38]
+2018-06-21 08:50:01,373 INFO: ML RESTAPI startup [in /home/victorl/Documents/DIPLOMADO-UPEL-EducacionUniversitaria/TEMAS-o-AREAS/COMPUTER-SCIENCE/EJEMPLOS/PYTHON/FLASK/sentimentpredictor/webapp/__init__.py:38]
+2018-06-21 08:50:32,109 INFO: ML RESTAPI startup [in /home/victorl/Documents/DIPLOMADO-UPEL-EducacionUniversitaria/TEMAS-o-AREAS/COMPUTER-SCIENCE/EJEMPLOS/PYTHON/FLASK/sentimentpredictor/webapp/__init__.py:38]
+2018-06-21 08:54:01,718 INFO: ML RESTAPI startup [in /home/victorl/Documents/DIPLOMADO-UPEL-EducacionUniversitaria/TEMAS-o-AREAS/COMPUTER-SCIENCE/EJEMPLOS/PYTHON/FLASK/sentimentpredictor/webapp/__init__.py:38]
+2018-06-21 08:56:27,901 INFO: ML RESTAPI startup [in /home/victorl/Documents/DIPLOMADO-UPEL-EducacionUniversitaria/TEMAS-o-AREAS/COMPUTER-SCIENCE/EJEMPLOS/PYTHON/FLASK/sentimentpredictor/webapp/__init__.py:38]
+2018-06-21 08:57:57,184 INFO: ML RESTAPI startup [in /home/victorl/Documents/DIPLOMADO-UPEL-EducacionUniversitaria/TEMAS-o-AREAS/COMPUTER-SCIENCE/EJEMPLOS/PYTHON/FLASK/sentimentpredictor/webapp/__init__.py:38]
+2018-06-21 09:23:07,220 INFO: ML RESTAPI startup [in /home/victorl/Documents/DIPLOMADO-UPEL-EducacionUniversitaria/TEMAS-o-AREAS/COMPUTER-SCIENCE/EJEMPLOS/PYTHON/FLASK/sentimentpredictor/webapp/__init__.py:38]
+2018-06-21 09:31:50,556 INFO: ML RESTAPI startup [in /home/victorl/Documents/DIPLOMADO-UPEL-EducacionUniversitaria/TEMAS-o-AREAS/COMPUTER-SCIENCE/EJEMPLOS/PYTHON/FLASK/sentimentpredictor/webapp/__init__.py:38]
+2018-06-21 09:32:15,606 ERROR: Exception on /predict [GET] [in /usr/local/lib/python3.5/dist-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/victorl/Documents/DIPLOMADO-UPEL-EducacionUniversitaria/TEMAS-o-AREAS/COMPUTER-SCIENCE/EJEMPLOS/PYTHON/FLASK/sentimentpredictor/webapp/restapi/routes.py", line 6, in predict
+    model=Mlmodel()
+TypeError: __init__() missing 1 required positional argument: 'model'
+2018-06-21 09:39:34,949 INFO: ML RESTAPI startup [in /home/victorl/Documents/DIPLOMADO-UPEL-EducacionUniversitaria/TEMAS-o-AREAS/COMPUTER-SCIENCE/EJEMPLOS/PYTHON/FLASK/sentimentpredictor/webapp/__init__.py:38]
+2018-06-21 09:39:44,535 ERROR: Exception on /predict [GET] [in /usr/local/lib/python3.5/dist-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1974, in make_response
+    rv = self.response_class.force_type(rv, request.environ)
+  File "/usr/local/lib/python3.5/dist-packages/werkzeug/wrappers.py", line 921, in force_type
+    response = BaseResponse(*_run_wsgi_app(response, environ))
+  File "/usr/local/lib/python3.5/dist-packages/werkzeug/wrappers.py", line 59, in _run_wsgi_app
+    return _run_wsgi_app(*args)
+  File "/usr/local/lib/python3.5/dist-packages/werkzeug/test.py", line 925, in run_wsgi_app
+    app_iter = iter(app_rv)
+TypeError: 'LogisticRegression' object is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1982, in make_response
+    reraise(TypeError, new_error, sys.exc_info()[2])
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 34, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1974, in make_response
+    rv = self.response_class.force_type(rv, request.environ)
+  File "/usr/local/lib/python3.5/dist-packages/werkzeug/wrappers.py", line 921, in force_type
+    response = BaseResponse(*_run_wsgi_app(response, environ))
+  File "/usr/local/lib/python3.5/dist-packages/werkzeug/wrappers.py", line 59, in _run_wsgi_app
+    return _run_wsgi_app(*args)
+  File "/usr/local/lib/python3.5/dist-packages/werkzeug/test.py", line 925, in run_wsgi_app
+    app_iter = iter(app_rv)
+TypeError: 'LogisticRegression' object is not iterable
+The view function did not return a valid response. The return type must be a string, tuple, Response instance, or WSGI callable, but it was a type.
+2018-06-21 09:40:26,620 INFO: ML RESTAPI startup [in /home/victorl/Documents/DIPLOMADO-UPEL-EducacionUniversitaria/TEMAS-o-AREAS/COMPUTER-SCIENCE/EJEMPLOS/PYTHON/FLASK/sentimentpredictor/webapp/__init__.py:38]
+2018-06-21 09:42:32,337 INFO: ML RESTAPI startup [in /home/victorl/Documents/DIPLOMADO-UPEL-EducacionUniversitaria/TEMAS-o-AREAS/COMPUTER-SCIENCE/EJEMPLOS/PYTHON/FLASK/sentimentpredictor/webapp/__init__.py:38]
+2018-06-21 09:43:02,161 ERROR: Exception on /predict [GET] [in /usr/local/lib/python3.5/dist-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2018-06-21 09:44:10,011 INFO: ML RESTAPI startup [in /home/victorl/Documents/DIPLOMADO-UPEL-EducacionUniversitaria/TEMAS-o-AREAS/COMPUTER-SCIENCE/EJEMPLOS/PYTHON/FLASK/sentimentpredictor/webapp/__init__.py:38]
+2018-06-21 09:45:06,284 INFO: ML RESTAPI startup [in /home/victorl/Documents/DIPLOMADO-UPEL-EducacionUniversitaria/TEMAS-o-AREAS/COMPUTER-SCIENCE/EJEMPLOS/PYTHON/FLASK/sentimentpredictor/webapp/__init__.py:38]
+2018-06-21 09:53:33,490 INFO: ML RESTAPI startup [in /home/victorl/Documents/DIPLOMADO-UPEL-EducacionUniversitaria/TEMAS-o-AREAS/COMPUTER-SCIENCE/EJEMPLOS/PYTHON/FLASK/sentimentpredictor/webapp/__init__.py:38]
+2018-06-21 10:11:26,108 INFO: ML RESTAPI startup [in /home/victorl/Documents/DIPLOMADO-UPEL-EducacionUniversitaria/TEMAS-o-AREAS/COMPUTER-SCIENCE/EJEMPLOS/PYTHON/FLASK/sentimentpredictor/webapp/__init__.py:38]
+2018-06-21 10:11:32,029 ERROR: Exception on /predict [GET] [in /usr/local/lib/python3.5/dist-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/victorl/Documents/DIPLOMADO-UPEL-EducacionUniversitaria/TEMAS-o-AREAS/COMPUTER-SCIENCE/EJEMPLOS/PYTHON/FLASK/sentimentpredictor/webapp/restapi/routes.py", line 8, in predict
+    return model.get_type()
+AttributeError: 'Mlmodel' object has no attribute 'get_type'
+2018-06-21 10:12:00,432 INFO: ML RESTAPI startup [in /home/victorl/Documents/DIPLOMADO-UPEL-EducacionUniversitaria/TEMAS-o-AREAS/COMPUTER-SCIENCE/EJEMPLOS/PYTHON/FLASK/sentimentpredictor/webapp/__init__.py:38]
+2018-06-21 10:16:42,346 INFO: ML RESTAPI startup [in /home/victorl/Documents/DIPLOMADO-UPEL-EducacionUniversitaria/TEMAS-o-AREAS/COMPUTER-SCIENCE/EJEMPLOS/PYTHON/FLASK/sentimentpredictor/webapp/__init__.py:38]
+2018-06-21 10:38:42,587 INFO: ML RESTAPI startup [in /home/victorl/Documents/DIPLOMADO-UPEL-EducacionUniversitaria/TEMAS-o-AREAS/COMPUTER-SCIENCE/EJEMPLOS/PYTHON/FLASK/sentimentpredictor/webapp/__init__.py:38]
+2018-06-21 10:40:34,346 INFO: ML RESTAPI startup [in /home/victorl/Documents/DIPLOMADO-UPEL-EducacionUniversitaria/TEMAS-o-AREAS/COMPUTER-SCIENCE/EJEMPLOS/PYTHON/FLASK/sentimentpredictor/webapp/__init__.py:38]
+2018-06-21 10:42:41,273 INFO: ML RESTAPI startup [in /home/victorl/Documents/DIPLOMADO-UPEL-EducacionUniversitaria/TEMAS-o-AREAS/COMPUTER-SCIENCE/EJEMPLOS/PYTHON/FLASK/sentimentpredictor/webapp/__init__.py:38]
+2018-06-21 10:43:54,799 INFO: ML RESTAPI startup [in /home/victorl/Documents/DIPLOMADO-UPEL-EducacionUniversitaria/TEMAS-o-AREAS/COMPUTER-SCIENCE/EJEMPLOS/PYTHON/FLASK/sentimentpredictor/webapp/__init__.py:38]
+2018-06-21 10:45:25,638 INFO: ML RESTAPI startup [in /home/victorl/Documents/DIPLOMADO-UPEL-EducacionUniversitaria/TEMAS-o-AREAS/COMPUTER-SCIENCE/EJEMPLOS/PYTHON/FLASK/sentimentpredictor/webapp/__init__.py:38]
